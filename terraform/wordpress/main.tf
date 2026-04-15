@@ -21,9 +21,10 @@ resource "aws_instance" "wordpress"{
   associate_public_ip_address = true
   iam_instance_profile        =  aws_iam_instance_profile.wordpress_profile.name
 
-  # user_data = templatefile("${path.module}/user_data.sh", {
-  #   db_pass = var.database_password
-  # })
+ user_data = templatefile("${path.module}/user_data.sh", {
+    db_pass = var.database_password
+  })
+  user_data_replace_on_change = true
  }
 
 data "aws_iam_policy_document" "wordpress_assume_role" {
