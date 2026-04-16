@@ -37,9 +37,6 @@ All infrastructure components were provisioned and managed entirely through Terr
 ### Terraform Apply
 ![Terraform Apply](images/terraform-apply.png)
 
-### Terraform Output
-![Terraform Output](images/terraform-output.png)
-
 ### EC2 Instance Running
 ![EC2 Instance](images/ec2-instance-running.png)
 
@@ -61,6 +58,7 @@ To improve modularity and maintain a clean codebase, I separated key components 
 
 ## 📁 Project Structure
 
+```text
 ├── README.md
 ├── images
 │   ├── admin-dashboard.png
@@ -76,6 +74,7 @@ To improve modularity and maintain a clean codebase, I separated key components 
 ├── terraform.tfstate
 ├── user_data.sh
 └── variables.tf
+```
 
 This modular approach helped enforce a DRY (Don't Repeat Yourself) codebase and made the infrastructure easier to extend or modify.
 
